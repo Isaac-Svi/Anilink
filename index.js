@@ -33,7 +33,7 @@ class Chain {
   delay(ms = this.ms) {
     this.duration += ms
 
-    const func = async () => await Animation.delay(ms)
+    const func = async () => await Chain.delay(ms)
     this.queue.push(func)
     return this
   }
@@ -52,7 +52,7 @@ class Chain {
 
       if (this.mode === 'simultaneous') return
 
-      await Animation.delay(transitionTime)
+      await Chain.delay(transitionTime)
     }
 
     this.queue.push(setStyles)
@@ -64,7 +64,7 @@ class Chain {
       func()
       if (this.mode === 'simultaneous') return
 
-      await Animation.delay(ms)
+      await Chain.delay(ms)
     }
     this.queue.push(CB)
     return this
