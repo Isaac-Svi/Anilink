@@ -5,13 +5,13 @@
 Installation
 
 ```
-npm i chain
+npm i anilink
 ```
 
 OR
 
 ```
-yard add chain
+yard add anilink
 ```
 
 Then...
